@@ -1,36 +1,44 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
-html{
-    font-size:  10px;
+
+html {
+    font-size: 10px;
     font-family: 'Courier New', Courier, monospace;
     scroll-behavior: smooth;
 }
-a{
+
+a {
     text-decoration: none;
 }
+
 .container {
     min-height: 100vh;
     width: 100%;
-    display: flex ;
+    display: flex;
     align-items: center;
     justify-content: center;
 }
-#one{
+
+#one {
     background-image: url(./icons/one.png);
     background-size: cover;
     background-position: top center;
 }
 
-#one .one{
-    max-width: 122200px;
-    margin-inline-start: 0 auto;
-    padding: 0, 50 px;
+#one .one {
+    /* Corrected: Typo in max-width */
+    max-width: 1200px; 
+    /* Corrected: Removed invalid property and value */
+    margin: 0 auto;
+    /* Corrected: Changed comma to space */
+    padding: 0 50px;
     justify-content: flex-start;
 }
-#one h1{
+
+#one h1 {
     display: block;
     width: fit-content;
     font-size: 4rem;
@@ -39,19 +47,20 @@ a{
     animation: text_reveal 5s ease forwards;
     animation-delay: 1.5s;
 }
-#one h1:nth-child(1){
+
+#one h1:nth-child(1) {
     animation-delay: 1.5s;
 }
 
-#one h1:nth-child(2){
+#one h1:nth-child(2) {
     animation-delay: 2s;
 }
 
-#one h1:nth-child(3){
+#one h1:nth-child(3) {
     animation-delay: 2.5s;
 }
 
-#one h1 span{
+#one h1 span {
     position: absolute;
     top: 0;
     left: 0;
@@ -62,49 +71,51 @@ a{
     animation-delay: 1s;
 }
 
-#one h1:nth-child(1) span{
+#one h1:nth-child(1) span {
     animation-delay: 1s;
 }
 
-#one h1:nth-child(2) span{
+#one h1:nth-child(2) span {
     animation-delay: 2s;
 }
 
-#one h1:nth-child(3) span{
+#one h1:nth-child(3) span {
     animation-delay: 3s;
 }
 
-
-#one .cta{
+#one .cta {
     display: inline-block;
-    padding:  10px 30px;
+    padding: 10px 30px;
     color: white;
     background-color: transparent;
     border: 2px solid rgb(0, 0, 0);
-    font-size: 2rem;    
+    font-size: 2rem;
     text-transform: uppercase;
     letter-spacing: 0.1rem;
     margin-top: 30px;
-    transition-property: bacground-color, color;
+    /* Corrected: Typo in 'background-color' */
+    transition-property: background-color, color;
 }
 
-#one .cta:hover{
+#one .cta:hover {
     background-color: rgb(0, 0, 0);
     color: white;
 }
 
-@keyframes text_reveal_box{
-    50%{
+@keyframes text_reveal_box {
+    50% {
         width: 100%;
         left: 0;
     }
-    100%{
-        width:  0%;
-        left: -100%;
+
+    100% {
+        width: 0%;
+        left: 100%;
     }
 }
-@keyframes text_reveal{
-100%{
-    color: #000;
-}
+
+@keyframes text_reveal {
+    100% {
+        color: #000;
+    }
 }

@@ -1,4 +1,4 @@
-#header{
+#header {
     position: fixed;
     z-index: 1000;
     left: 0;
@@ -6,13 +6,14 @@
     width: 100%;
     height: auto;
 }
-#header .header{
+
+#header .header {
     min-height: 8vh;
-    background-color: rgb(31,30,30,0.24);
+    background-color: rgb(31, 30, 30, 0.24);
     transition: .3s ease background-color;
 }
 
- .header .nav-bar{
+.header .nav-bar {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -20,9 +21,9 @@
     height: 100%;
     max-width: 1300px;
     padding: 0 10px;
- }
+}
 
- #header .nav-list ul{
+#header .nav-list ul {
     list-style: none;
     position: absolute;
     background-color: rgb(31, 30, 30);
@@ -37,14 +38,13 @@
     z-index: 1;
     overflow-x: hidden;
     transition: .3s ease left;
- }
- #header .nav-list ul.active{
+}
+
+#header .nav-list ul.active {
     left: 0;
- }
+}
 
-
-
- #header .nav-list ul a{
+#header .nav-list ul a {
     font-size: 2.5rem;
     font-weight: 500;
     letter-spacing: .2rem;
@@ -53,9 +53,9 @@
     text-transform: uppercase;
     padding: 20px;
     display: block;
- }
+}
 
- #header .nav-list ul a::after{
+#header .nav-list ul a::after {
     content: attr(data-after);
     position: absolute;
     top: 50%;
@@ -65,14 +65,16 @@
     font-size: 16rem;
     letter-spacing: 50px;
     z-index: -1;
-    transition: .3 ease letter-spacing;
- }
- #header .nav-list ul:hover a::after{
+    /* Corrected: Added 's' for seconds */
+    transition: .3s ease letter-spacing;
+}
+
+#header .nav-list ul:hover a::after {
     transform: translate(-50%, -50%) scale(1);
     letter-spacing: initial;
- }
+}
 
- #header .hamb{
+#header .hamb {
     height: 60px;
     width: 60px;
     display: inline-block;
@@ -87,14 +89,16 @@
     transform: scale(.8);
     margin-right: 20px;
 }
-#header .hamb .bar{
+
+#header .hamb .bar {
     height: 2px;
     width: 30px;
     position: relative;
     background-color: white;
     z-index: -1;
 }
-#header .hamb::after{
+
+#header .hamb::after {
     position: absolute;
     content: '';
     height: 100%;
@@ -105,7 +109,8 @@
 }
 
 #header .hamb .bar::after,
-header .hamb .bar::before{
+/* Corrected: Added '#' to the header selector */
+#header .hamb .bar::before {
     content: '';
     position: absolute;
     height: 100%;
@@ -115,25 +120,29 @@ header .hamb .bar::before{
     transition: .3s;
     transition-property: top, bottom;
 }
-#header .hamb .bar::after{
+
+#header .hamb .bar::after {
     top: 8px;
 }
-#header .hamb .bar::before{
+
+#header .hamb .bar::before {
     bottom: 8px;
 }
 
-#header .hamb.active .bar::after{
+#header .hamb.active .bar::after {
     top: 0;
 }
-#header .hamb.active .bar::before{
+
+#header .hamb.active .bar::before {
     bottom: 0;
 }
-@keyframes hamb_puls{
-    0%{
+
+@keyframes hamb_puls {
+    0% {
         opacity: 1;
         transform: scale(1);
     }
-    100%{
+    100% {
         opacity: 0;
         transform: scale(1.4);
     }
